@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: simple-web-server
-          image: "ghcr.io/yvhaa/simple-web-service:35182a02ab39e841104257f7490d1d6c43d7bfeb"
+          image: "ghcr.io/yvhaa/simple-web-service:1724080016"
       ports:
         containerPort: 8090
         protocol: TCP
