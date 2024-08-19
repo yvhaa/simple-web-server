@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sws-app
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sws-app
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: sws-app
+    spec:
+      containers:
+        - name: simple-web-server
+          image: simple-web-server:latest
+          imagePullPolicy: Never
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sws-app
+  namespace: default
+spec:
+  #type: NodePort
+  selector:
+    app: sws-app
+  ports:
+    - port: 8090
+      #targetPort: 8090
