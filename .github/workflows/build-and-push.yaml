@@ -15,7 +15,7 @@ jobs:
         id: get-image-name
         run: |
           CUR_TIME="$(date +%s)"
-          IMAGE_NAME="ghcr.io/yvhaa/simple-web-service:${CUR_TIME}"
+          IMAGE_NAME="ghcr.io/yvhaa/simple-web-service:x${CUR_TIME}"
           echo "image_name=${IMAGE_NAME}" >> $GITHUB_OUTPUT
 
       - name: Setup Docker Buildx
