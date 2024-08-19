@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: simple-web-server
-          image: "ghcr.io/yvhaa/simple-web-service:1724080016"
+          image: "ghcr.io/yvhaa/simple-web-service:1724080016" # {"$imagepolicy":"flux-system:simple-web-service"}
       ports:
         containerPort: 8090
         protocol: TCP
