@@ -1,7 +1,7 @@
 FROM openjdk:21-jdk-slim  AS build
 RUN apt update && apt install -y maven
 WORKDIR /opt/SimpleWebServer
-COPY app .
+COPY ./app .
 RUN mvn clean install
 
 FROM alpine:latest
