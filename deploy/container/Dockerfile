@@ -4,9 +4,7 @@ WORKDIR /opt/SimpleWebServer
 COPY ./app .
 RUN mvn clean install
 
-FROM alpine:latest
-RUN apk update
-RUN apk add openjdk21-jre
+FROM gcr.io/distroless/java17-debian12:latest
 COPY --from=build /opt/SimpleWebServer/target/SimpleWebServer-1.0-SNAPSHOT-jar-with-dependencies.jar /opt/SimpleWebServer.jar
 EXPOSE 8090
-CMD ["java", "-jar", "/opt/SimpleWebServer.jar"]
+CMD ["/opt/SimpleWebServer.jar"]
