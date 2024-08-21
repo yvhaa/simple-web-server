@@ -1,10 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-
 resources:
   - namespace.yaml
   - deployment.yaml
-
 images:
   - name: "ghcr.io/yvhaa/simple-web-service" # {"$imagepolicy": "flux-system:simple-web-service:name"}
-    newTag: "x1724138884" # {"$imagepolicy": "flux-system:simple-web-service:tag"}
+    newTag: "x1724226644" # {"$imagepolicy": "flux-system:simple-web-service:tag"}
