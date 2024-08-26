@@ -20,7 +20,7 @@ public class EchoServlet extends HttpServlet {
             @Override
             public void onWritePossible() throws IOException {
                 while (out.isReady()) {
-                    out.write("Hello World3!".getBytes());
+                    out.write("Hello World4!".getBytes());
                     async.complete();
                     return;
                 }
